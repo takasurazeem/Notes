@@ -1,4 +1,4 @@
-namespace Notes.Models;
+﻿namespace Notes.Models;
 
 internal class Note
 {
