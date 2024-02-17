@@ -6,12 +6,12 @@ public partial class AllNotesPage : ContentPage
     {
         InitializeComponent();
 
-        BindingContext = new Models.AllNotes();
+        // BindingContext = new Models.AllNotes();
     }
 
     protected override void OnAppearing()
     {
-        ((Models.AllNotes)BindingContext).LoadNotes();
+       // ((Models.AllNotes)BindingContext).LoadNotes();
     }
 
     private async void Add_Clicked(object sender, EventArgs e)
