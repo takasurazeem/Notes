@@ -5,7 +5,7 @@ public partial class AllNotesPage : ContentPage
     public AllNotesPage()
     {
         InitializeComponent();
-
+        //Todo: Fix later
         // BindingContext = new Models.AllNotes();
     }
 
