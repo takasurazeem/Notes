@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using DotNet.Meteor.HotReload.Plugin;
 
 namespace Notes
 {
@@ -9,6 +10,9 @@ namespace Notes
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+#if DEBUG
+            .EnableHotReload()
+#endif
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
@@ -16,7 +20,7 @@ namespace Notes
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
             return builder.Build();
